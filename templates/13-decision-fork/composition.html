@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en" data-composition-variables='[{"id":"title","type":"string","label":"Title","default":"Decision Fork","maxLength":72},{"id":"kicker","type":"string","label":"Kicker","default":"Planned","maxLength":42},{"id":"question","type":"string","label":"Review question","default":"Does the fork make consequences clear?","maxLength":120},{"id":"accentColor","type":"color","label":"Accent colour","default":"#2f765f"},{"id":"basePlateUrl","type":"string","label":"Base plate URL","default":"../assets/1.png"},{"id":"footerText","type":"string","label":"Footer text","default":"Review one style at a time","maxLength":80},{"id":"showQuestion","type":"boolean","label":"Show review question","default":true},{"id":"goodLabel","type":"string","label":"Positive path label","default":"Controlled change","maxLength":36},{"id":"badLabel","type":"string","label":"Negative path label","default":"Budget blown","maxLength":36},{"id":"goodColor","type":"color","label":"Positive colour","default":"#22c55e"},{"id":"badColor","type":"color","label":"Negative colour","default":"#ef4444"}]'>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=1920, height=1080" />
+  <title>Decision Fork</title>
+  <style>
+    * { box-sizing: border-box; }
+    html, body { width: 1920px; height: 1080px; margin: 0; overflow: hidden; background: #f5f2ea; color: #182026; font-family: Arial, Helvetica, sans-serif; }
+    .stage { position: relative; width: 1920px; height: 1080px; overflow: hidden; background: #f5f2ea; --accent: #2f765f; }
+    .plate { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: .96; }
+    .top-accent { position: absolute; left: 0; right: 0; top: 0; height: 16px; background: var(--accent); }
+    .unit { position: absolute; left: 332px; top: 94px; display: flex; align-items: center; gap: 16px; color: #3d4a52; font-size: 28px; font-weight: 700; }
+    .unit-dot { width: 18px; height: 18px; background: var(--accent); border-radius: 50%; }
+    .kicker { position: absolute; left: 332px; top: 184px; color: var(--accent); font-size: 32px; font-weight: 900; text-transform: uppercase; }
+    h1 { position: absolute; left: 332px; top: 240px; width: 1280px; margin: 0; color: #182026; font-size: 58px; line-height: 1.03; font-weight: 900; }
+    .question { position: absolute; left: 332px; top: 372px; width: 1200px; color: #39484f; font-size: 30px; line-height: 1.18; font-weight: 700; }
+    .demo { position: absolute; left: 332px; top: 440px; width: 1358px; height: 390px; }
+    .footer { position: absolute; left: 332px; right: 252px; bottom: 54px; height: 42px; display: flex; align-items: center; justify-content: space-between; border-top: 3px solid rgba(52,66,76,.18); color: #5a666d; font-size: 22px; font-weight: 700; }
+    .progress { color: var(--accent); font-weight: 900; }
+    .card, .pill, .row, .block, .cell { border-radius: 8px; background: rgba(255,255,255,.84); box-shadow: 0 16px 36px rgba(24,32,38,.08); }
+    @keyframes rise { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes fromLeft { from { opacity: 0; transform: translateX(-110px); } to { opacity: 1; transform: translateX(0); } }
+    @keyframes fromRight { from { opacity: 0; transform: translateX(110px); } to { opacity: 1; transform: translateX(0); } }
+    @keyframes drop { from { opacity: 0; transform: translateY(-82px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes growX { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+    @keyframes growY { from { transform: scaleY(0); } to { transform: scaleY(1); } }
+    @keyframes draw { to { stroke-dashoffset: 0; } }
+    @keyframes spinIn { 0% { opacity: 0; transform: rotate(-42deg) scale(.22); } 62% { opacity: 1; transform: rotate(8deg) scale(1.06); } 100% { opacity: 1; transform: rotate(0deg) scale(1); } }
+    @keyframes labelIn { from { opacity: 0; transform: translateY(24px) scale(.94); } to { opacity: 1; transform: translateY(0) scale(1); } }
+    .fork { width:1040px; height:390px; display:block; margin:0 auto; overflow:visible; }
+    .fork path { fill:none; stroke-width:12; stroke-linecap:round; stroke-dasharray:900; stroke-dashoffset:900; animation:draw 1.8s .7s forwards; }
+    .fork .main { stroke:#64748b; } .fork .good { stroke:var(--good); animation-delay:1.4s; } .fork .bad { stroke:var(--bad); animation-delay:1.7s; }
+    .fork text { font-size:30px; font-weight:900; fill:#26343b; text-anchor:start; }
+  </style>
+</head>
+<body>
+  <main class="stage" data-composition-id="13-decision-fork" data-width="1920" data-height="1080" data-duration="10">
+    <img class="plate" alt="" />
+    <div class="top-accent"></div>
+    <div class="unit"><span class="unit-dot"></span><span>Hyperslides Variable Catalog</span></div>
+    <div class="kicker"></div>
+    <h1></h1>
+    <div class="question"></div>
+    <section class="demo"></section>
+    <footer class="footer"><span class="footer-text"></span><span class="progress">13/14</span></footer>
+  </main>
+  <script>
+    const defaults = {
+    "title": "Decision Fork",
+    "kicker": "Planned",
+    "question": "Does the fork make consequences clear?",
+    "accentColor": "#2f765f",
+    "basePlateUrl": "../assets/1.png",
+    "footerText": "Review one style at a time",
+    "showQuestion": true,
+    "goodLabel": "Controlled change",
+    "badLabel": "Budget blown",
+    "goodColor": "#22c55e",
+    "badColor": "#ef4444"
+};
+    const values = { ...defaults, ...(window.__hyperframes?.getVariables?.() ?? {}) };
+    const root = document.querySelector('[data-composition-id="13-decision-fork"]');
+    root.style.setProperty('--accent', values.accentColor);
+    root.querySelector('.plate').src = values.basePlateUrl;
+    root.querySelector('.kicker').textContent = values.kicker;
+    root.querySelector('h1').textContent = values.title;
+    root.querySelector('.question').textContent = values.showQuestion ? values.question : '';
+    root.querySelector('.footer-text').textContent = values.footerText;
+    root.style.setProperty('--good', values.goodColor); root.style.setProperty('--bad', values.badColor);
+    root.querySelector('.demo').innerHTML = '<svg class="fork" viewBox="0 0 1000 380"><path class="main" d="M80 190 C 225 190, 320 190, 420 190"/><path class="good" d="M420 190 C 555 105, 690 82, 860 78"/><path class="bad" d="M420 190 C 555 275, 690 312, 860 318"/><text x="635" y="70">' + values.goodLabel + '</text><text x="635" y="354">' + values.badLabel + '</text></svg>';
+  </script>
+</body>
+</html>

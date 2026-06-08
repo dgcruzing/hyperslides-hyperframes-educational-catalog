@@ -1,0 +1,82 @@
+[
+  {
+    "id": "title",
+    "type": "string",
+    "label": "Title",
+    "default": "Triple Constraint",
+    "maxLength": 72
+  },
+  {
+    "id": "kicker",
+    "type": "string",
+    "label": "Kicker",
+    "default": "Planned",
+    "maxLength": 42
+  },
+  {
+    "id": "question",
+    "type": "string",
+    "label": "Review question",
+    "default": "Does the triangle make scope/time/cost trade-offs visible?",
+    "maxLength": 120
+  },
+  {
+    "id": "accentColor",
+    "type": "color",
+    "label": "Accent colour",
+    "default": "#33424c"
+  },
+  {
+    "id": "basePlateUrl",
+    "type": "string",
+    "label": "Base plate URL",
+    "default": "../assets/4.png"
+  },
+  {
+    "id": "footerText",
+    "type": "string",
+    "label": "Footer text",
+    "default": "Review one style at a time",
+    "maxLength": 80
+  },
+  {
+    "id": "showQuestion",
+    "type": "boolean",
+    "label": "Show review question",
+    "default": true
+  },
+  {
+    "id": "topLabel",
+    "type": "string",
+    "label": "Top label",
+    "default": "SCOPE",
+    "maxLength": 18
+  },
+  {
+    "id": "leftLabel",
+    "type": "string",
+    "label": "Left label",
+    "default": "TIME",
+    "maxLength": 18
+  },
+  {
+    "id": "rightLabel",
+    "type": "string",
+    "label": "Right label",
+    "default": "COST",
+    "maxLength": 18
+  },
+  {
+    "id": "centreLabel",
+    "type": "string",
+    "label": "Centre label",
+    "default": "QUALITY",
+    "maxLength": 24
+  },
+  {
+    "id": "spinIn",
+    "type": "boolean",
+    "label": "Spin triangle in",
+    "default": true
+  }
+]

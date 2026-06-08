@@ -1,0 +1,92 @@
+[
+  {
+    "id": "title",
+    "type": "string",
+    "label": "Title",
+    "default": "Base 02 - Drop/Slide Rows",
+    "maxLength": 72
+  },
+  {
+    "id": "kicker",
+    "type": "string",
+    "label": "Kicker",
+    "default": "Experimental",
+    "maxLength": 42
+  },
+  {
+    "id": "question",
+    "type": "string",
+    "label": "Review question",
+    "default": "Is this useful when two flip cards are not enough?",
+    "maxLength": 120
+  },
+  {
+    "id": "accentColor",
+    "type": "color",
+    "label": "Accent colour",
+    "default": "#285f9f"
+  },
+  {
+    "id": "basePlateUrl",
+    "type": "string",
+    "label": "Base plate URL",
+    "default": "../assets/2.png"
+  },
+  {
+    "id": "footerText",
+    "type": "string",
+    "label": "Footer text",
+    "default": "Review one style at a time",
+    "maxLength": 80
+  },
+  {
+    "id": "showQuestion",
+    "type": "boolean",
+    "label": "Show review question",
+    "default": true
+  },
+  {
+    "id": "rowOne",
+    "type": "string",
+    "label": "Row 1",
+    "default": "Row 1 drops",
+    "maxLength": 64
+  },
+  {
+    "id": "rowTwo",
+    "type": "string",
+    "label": "Row 2",
+    "default": "Row 2 slides left",
+    "maxLength": 64
+  },
+  {
+    "id": "rowThree",
+    "type": "string",
+    "label": "Row 3",
+    "default": "Row 3 slides right",
+    "maxLength": 64
+  },
+  {
+    "id": "rowFour",
+    "type": "string",
+    "label": "Row 4",
+    "default": "Row 4 drops",
+    "maxLength": 64
+  },
+  {
+    "id": "rowMotion",
+    "type": "enum",
+    "label": "Row motion",
+    "default": "mixed-drop-slide",
+    "options": [
+      {
+        "value": "mixed-drop-slide",
+        "label": "Mixed drop/slide"
+      },
+      {
+        "value": "drop-only",
+        "label": "Drop only"
+      }
+    ]
+  }
+]

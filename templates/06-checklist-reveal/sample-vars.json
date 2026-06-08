@@ -1,0 +1,14 @@
+{
+  "title": "Checklist Reveal",
+  "kicker": "Planned",
+  "question": "Does this work for procedure and evidence cues?",
+  "accentColor": "#6957a6",
+  "basePlateUrl": "../assets/6.png",
+  "footerText": "Review one style at a time",
+  "showQuestion": true,
+  "itemOne": "Scope impact checked",
+  "itemTwo": "Cost impact checked",
+  "itemThree": "Schedule impact checked",
+  "itemFour": "Approval recorded",
+  "checkColor": "#22c55e"
+}

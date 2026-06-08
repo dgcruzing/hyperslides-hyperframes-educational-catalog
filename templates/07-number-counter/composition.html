@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en" data-composition-variables='[{"id":"title","type":"string","label":"Title","default":"Cost Number Counter","maxLength":72},{"id":"kicker","type":"string","label":"Kicker","default":"Planned","maxLength":42},{"id":"question","type":"string","label":"Review question","default":"Does the number animation make cost impact visible?","maxLength":120},{"id":"accentColor","type":"color","label":"Accent colour","default":"#2f765f"},{"id":"basePlateUrl","type":"string","label":"Base plate URL","default":"../assets/1.png"},{"id":"footerText","type":"string","label":"Footer text","default":"Review one style at a time","maxLength":80},{"id":"showQuestion","type":"boolean","label":"Show review question","default":true},{"id":"amount","type":"number","label":"Final amount","default":485000,"min":0,"max":5000000,"step":1000,"unit":"$"},{"id":"caption","type":"string","label":"Caption","default":"Every block has a unit rate behind it","maxLength":90},{"id":"prefix","type":"string","label":"Prefix","default":"$","maxLength":4}]'>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=1920, height=1080" />
+  <title>Cost Number Counter</title>
+  <style>
+    * { box-sizing: border-box; }
+    html, body { width: 1920px; height: 1080px; margin: 0; overflow: hidden; background: #f5f2ea; color: #182026; font-family: Arial, Helvetica, sans-serif; }
+    .stage { position: relative; width: 1920px; height: 1080px; overflow: hidden; background: #f5f2ea; --accent: #2f765f; }
+    .plate { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: .96; }
+    .top-accent { position: absolute; left: 0; right: 0; top: 0; height: 16px; background: var(--accent); }
+    .unit { position: absolute; left: 332px; top: 94px; display: flex; align-items: center; gap: 16px; color: #3d4a52; font-size: 28px; font-weight: 700; }
+    .unit-dot { width: 18px; height: 18px; background: var(--accent); border-radius: 50%; }
+    .kicker { position: absolute; left: 332px; top: 184px; color: var(--accent); font-size: 32px; font-weight: 900; text-transform: uppercase; }
+    h1 { position: absolute; left: 332px; top: 240px; width: 1280px; margin: 0; color: #182026; font-size: 58px; line-height: 1.03; font-weight: 900; }
+    .question { position: absolute; left: 332px; top: 372px; width: 1200px; color: #39484f; font-size: 30px; line-height: 1.18; font-weight: 700; }
+    .demo { position: absolute; left: 332px; top: 440px; width: 1358px; height: 390px; }
+    .footer { position: absolute; left: 332px; right: 252px; bottom: 54px; height: 42px; display: flex; align-items: center; justify-content: space-between; border-top: 3px solid rgba(52,66,76,.18); color: #5a666d; font-size: 22px; font-weight: 700; }
+    .progress { color: var(--accent); font-weight: 900; }
+    .card, .pill, .row, .block, .cell { border-radius: 8px; background: rgba(255,255,255,.84); box-shadow: 0 16px 36px rgba(24,32,38,.08); }
+    @keyframes rise { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes fromLeft { from { opacity: 0; transform: translateX(-110px); } to { opacity: 1; transform: translateX(0); } }
+    @keyframes fromRight { from { opacity: 0; transform: translateX(110px); } to { opacity: 1; transform: translateX(0); } }
+    @keyframes drop { from { opacity: 0; transform: translateY(-82px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes growX { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+    @keyframes growY { from { transform: scaleY(0); } to { transform: scaleY(1); } }
+    @keyframes draw { to { stroke-dashoffset: 0; } }
+    @keyframes spinIn { 0% { opacity: 0; transform: rotate(-42deg) scale(.22); } 62% { opacity: 1; transform: rotate(8deg) scale(1.06); } 100% { opacity: 1; transform: rotate(0deg) scale(1); } }
+    @keyframes labelIn { from { opacity: 0; transform: translateY(24px) scale(.94); } to { opacity: 1; transform: translateY(0) scale(1); } }
+    .counter { display:grid; place-items:center; height:330px; }
+    .metric { color:var(--accent); font-size:110px; font-weight:900; animation:rise .8s .8s both; }
+    .caption { font-size:34px; font-weight:800; color:#34434b; }
+  </style>
+</head>
+<body>
+  <main class="stage" data-composition-id="07-number-counter" data-width="1920" data-height="1080" data-duration="10">
+    <img class="plate" alt="" />
+    <div class="top-accent"></div>
+    <div class="unit"><span class="unit-dot"></span><span>Hyperslides Variable Catalog</span></div>
+    <div class="kicker"></div>
+    <h1></h1>
+    <div class="question"></div>
+    <section class="demo"></section>
+    <footer class="footer"><span class="footer-text"></span><span class="progress">07/14</span></footer>
+  </main>
+  <script>
+    const defaults = {
+    "title": "Cost Number Counter",
+    "kicker": "Planned",
+    "question": "Does the number animation make cost impact visible?",
+    "accentColor": "#2f765f",
+    "basePlateUrl": "../assets/1.png",
+    "footerText": "Review one style at a time",
+    "showQuestion": true,
+    "amount": 485000,
+    "caption": "Every block has a unit rate behind it",
+    "prefix": "$"
+};
+    const values = { ...defaults, ...(window.__hyperframes?.getVariables?.() ?? {}) };
+    const root = document.querySelector('[data-composition-id="07-number-counter"]');
+    root.style.setProperty('--accent', values.accentColor);
+    root.querySelector('.plate').src = values.basePlateUrl;
+    root.querySelector('.kicker').textContent = values.kicker;
+    root.querySelector('h1').textContent = values.title;
+    root.querySelector('.question').textContent = values.showQuestion ? values.question : '';
+    root.querySelector('.footer-text').textContent = values.footerText;
+    root.querySelector('.demo').innerHTML = '<div class="counter"><div id="cost-counter" class="metric">' + values.prefix + '0</div><div class="caption">' + values.caption + '</div></div>';
+    const counterEl = root.querySelector('#cost-counter'); const target = Number(values.amount); const startAt = performance.now() + 900; const durationMs = 1900; const ease = (t) => 1 - Math.pow(1 - t, 3);
+    function tick(now) { const progress = Math.min(1, Math.max(0, (now - startAt) / durationMs)); counterEl.textContent = values.prefix + Math.round(target * ease(progress)).toLocaleString('en-US'); if (progress < 1) requestAnimationFrame(tick); }
+    requestAnimationFrame(tick);
+  </script>
+</body>
+</html>

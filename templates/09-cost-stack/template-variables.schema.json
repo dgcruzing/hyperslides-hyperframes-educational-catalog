@@ -1,0 +1,83 @@
+[
+  {
+    "id": "title",
+    "type": "string",
+    "label": "Title",
+    "default": "Cost Stack",
+    "maxLength": 72
+  },
+  {
+    "id": "kicker",
+    "type": "string",
+    "label": "Kicker",
+    "default": "Planned",
+    "maxLength": 42
+  },
+  {
+    "id": "question",
+    "type": "string",
+    "label": "Review question",
+    "default": "Do stacked blocks make budget categories tangible?",
+    "maxLength": 120
+  },
+  {
+    "id": "accentColor",
+    "type": "color",
+    "label": "Accent colour",
+    "default": "#cd5746"
+  },
+  {
+    "id": "basePlateUrl",
+    "type": "string",
+    "label": "Base plate URL",
+    "default": "../assets/3.png"
+  },
+  {
+    "id": "footerText",
+    "type": "string",
+    "label": "Footer text",
+    "default": "Review one style at a time",
+    "maxLength": 80
+  },
+  {
+    "id": "showQuestion",
+    "type": "boolean",
+    "label": "Show review question",
+    "default": true
+  },
+  {
+    "id": "blockOne",
+    "type": "string",
+    "label": "Block 1",
+    "default": "35% Labour",
+    "maxLength": 36
+  },
+  {
+    "id": "blockTwo",
+    "type": "string",
+    "label": "Block 2",
+    "default": "30% Materials",
+    "maxLength": 36
+  },
+  {
+    "id": "blockThree",
+    "type": "string",
+    "label": "Block 3",
+    "default": "15% Equipment",
+    "maxLength": 36
+  },
+  {
+    "id": "blockFour",
+    "type": "string",
+    "label": "Block 4",
+    "default": "12% Subcontractors",
+    "maxLength": 36
+  },
+  {
+    "id": "blockFive",
+    "type": "string",
+    "label": "Block 5",
+    "default": "8% Contingency",
+    "maxLength": 36
+  }
+]

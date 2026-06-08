@@ -1,0 +1,76 @@
+[
+  {
+    "id": "title",
+    "type": "string",
+    "label": "Title",
+    "default": "Gantt Bar Growth",
+    "maxLength": 72
+  },
+  {
+    "id": "kicker",
+    "type": "string",
+    "label": "Kicker",
+    "default": "Planned",
+    "maxLength": 42
+  },
+  {
+    "id": "question",
+    "type": "string",
+    "label": "Review question",
+    "default": "Does this communicate schedule sequence quickly?",
+    "maxLength": 120
+  },
+  {
+    "id": "accentColor",
+    "type": "color",
+    "label": "Accent colour",
+    "default": "#b1792f"
+  },
+  {
+    "id": "basePlateUrl",
+    "type": "string",
+    "label": "Base plate URL",
+    "default": "../assets/5.png"
+  },
+  {
+    "id": "footerText",
+    "type": "string",
+    "label": "Footer text",
+    "default": "Review one style at a time",
+    "maxLength": 80
+  },
+  {
+    "id": "showQuestion",
+    "type": "boolean",
+    "label": "Show review question",
+    "default": true
+  },
+  {
+    "id": "taskOne",
+    "type": "string",
+    "label": "Task 1",
+    "default": "Site preparation",
+    "maxLength": 48
+  },
+  {
+    "id": "taskTwo",
+    "type": "string",
+    "label": "Task 2",
+    "default": "Foundation",
+    "maxLength": 48
+  },
+  {
+    "id": "taskThree",
+    "type": "string",
+    "label": "Task 3",
+    "default": "Structure",
+    "maxLength": 48
+  },
+  {
+    "id": "taskFour",
+    "type": "string",
+    "label": "Task 4",
+    "default": "Close-out",
+    "maxLength": 48
+  }
+]

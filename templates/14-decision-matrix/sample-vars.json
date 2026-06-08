@@ -1,0 +1,20 @@
+{
+  "title": "Decision Matrix",
+  "kicker": "Planned",
+  "question": "Is this useful for advanced option selection?",
+  "accentColor": "#285f9f",
+  "basePlateUrl": "../assets/2.png",
+  "footerText": "Review one style at a time",
+  "showQuestion": true,
+  "optionOne": "Option A",
+  "optionTwo": "Option B",
+  "criterionOne": "Cost",
+  "criterionTwo": "Schedule",
+  "criterionThree": "Quality",
+  "scoreOneA": 8,
+  "scoreOneB": 5,
+  "scoreTwoA": 7,
+  "scoreTwoB": 4,
+  "scoreThreeA": 9,
+  "scoreThreeB": 6
+}

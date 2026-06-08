@@ -1,0 +1,12 @@
+{
+  "title": "Cost Number Counter",
+  "kicker": "Planned",
+  "question": "Does the number animation make cost impact visible?",
+  "accentColor": "#2f765f",
+  "basePlateUrl": "../assets/1.png",
+  "footerText": "Review one style at a time",
+  "showQuestion": true,
+  "amount": 485000,
+  "caption": "Every block has a unit rate behind it",
+  "prefix": "$"
+}

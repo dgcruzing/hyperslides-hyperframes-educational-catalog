@@ -1,0 +1,76 @@
+[
+  {
+    "id": "title",
+    "type": "string",
+    "label": "Title",
+    "default": "Base 01 - Voice-Paced Flip Cards",
+    "maxLength": 72
+  },
+  {
+    "id": "kicker",
+    "type": "string",
+    "label": "Kicker",
+    "default": "Locked baseline",
+    "maxLength": 42
+  },
+  {
+    "id": "question",
+    "type": "string",
+    "label": "Review question",
+    "default": "Does this remain the default ACS module-intro feel?",
+    "maxLength": 120
+  },
+  {
+    "id": "accentColor",
+    "type": "color",
+    "label": "Accent colour",
+    "default": "#2f765f"
+  },
+  {
+    "id": "basePlateUrl",
+    "type": "string",
+    "label": "Base plate URL",
+    "default": "../assets/1.png"
+  },
+  {
+    "id": "footerText",
+    "type": "string",
+    "label": "Footer text",
+    "default": "Review one style at a time",
+    "maxLength": 80
+  },
+  {
+    "id": "showQuestion",
+    "type": "boolean",
+    "label": "Show review question",
+    "default": true
+  },
+  {
+    "id": "cardOneFront",
+    "type": "string",
+    "label": "Card 1 front",
+    "default": "Front captions hold for voice start",
+    "maxLength": 52
+  },
+  {
+    "id": "cardOneBack",
+    "type": "string",
+    "label": "Card 1 back",
+    "default": "Cards flip into learner-facing detail after the voice start.",
+    "maxLength": 160
+  },
+  {
+    "id": "cardTwoFront",
+    "type": "string",
+    "label": "Card 2 front",
+    "default": "Cards flip into detail",
+    "maxLength": 52
+  },
+  {
+    "id": "cardTwoBack",
+    "type": "string",
+    "label": "Card 2 back",
+    "default": "Outro and plate rules stay locked for ACS production use.",
+    "maxLength": 160
+  }
+]

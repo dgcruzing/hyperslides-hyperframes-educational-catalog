@@ -1,0 +1,88 @@
+[
+  {
+    "id": "title",
+    "type": "string",
+    "label": "Title",
+    "default": "Right Way / Wrong Way Columns",
+    "maxLength": 72
+  },
+  {
+    "id": "kicker",
+    "type": "string",
+    "label": "Kicker",
+    "default": "Planned",
+    "maxLength": 42
+  },
+  {
+    "id": "question",
+    "type": "string",
+    "label": "Review question",
+    "default": "Does side-by-side contrast help decision making?",
+    "maxLength": 120
+  },
+  {
+    "id": "accentColor",
+    "type": "color",
+    "label": "Accent colour",
+    "default": "#b1792f"
+  },
+  {
+    "id": "basePlateUrl",
+    "type": "string",
+    "label": "Base plate URL",
+    "default": "../assets/5.png"
+  },
+  {
+    "id": "footerText",
+    "type": "string",
+    "label": "Footer text",
+    "default": "Review one style at a time",
+    "maxLength": 80
+  },
+  {
+    "id": "showQuestion",
+    "type": "boolean",
+    "label": "Show review question",
+    "default": true
+  },
+  {
+    "id": "leftTitle",
+    "type": "string",
+    "label": "Left title",
+    "default": "Right Way",
+    "maxLength": 36
+  },
+  {
+    "id": "leftBody",
+    "type": "string",
+    "label": "Left body",
+    "default": "Assess impact, cost the change, gain approval, then implement.",
+    "maxLength": 180
+  },
+  {
+    "id": "leftColor",
+    "type": "color",
+    "label": "Left colour",
+    "default": "#22c55e"
+  },
+  {
+    "id": "rightTitle",
+    "type": "string",
+    "label": "Right title",
+    "default": "Wrong Way",
+    "maxLength": 36
+  },
+  {
+    "id": "rightBody",
+    "type": "string",
+    "label": "Right body",
+    "default": "Say yes immediately, skip costing, and absorb the overrun.",
+    "maxLength": 180
+  },
+  {
+    "id": "rightColor",
+    "type": "color",
+    "label": "Right colour",
+    "default": "#ef4444"
+  }
+]

@@ -1,0 +1,12 @@
+{
+  "title": "Scope Funnel",
+  "kicker": "Planned",
+  "question": "Does the metaphor explain narrowing scope?",
+  "accentColor": "#285f9f",
+  "basePlateUrl": "../assets/2.png",
+  "footerText": "Review one style at a time",
+  "showQuestion": true,
+  "topLabel": "Requests and ideas",
+  "middleLabel": "Feasibility filter",
+  "bottomLabel": "Approved scope"
+}

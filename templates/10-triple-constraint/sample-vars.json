@@ -1,0 +1,14 @@
+{
+  "title": "Triple Constraint",
+  "kicker": "Planned",
+  "question": "Does the triangle make scope/time/cost trade-offs visible?",
+  "accentColor": "#33424c",
+  "basePlateUrl": "../assets/4.png",
+  "footerText": "Review one style at a time",
+  "showQuestion": true,
+  "topLabel": "SCOPE",
+  "leftLabel": "TIME",
+  "rightLabel": "COST",
+  "centreLabel": "QUALITY",
+  "spinIn": true
+}

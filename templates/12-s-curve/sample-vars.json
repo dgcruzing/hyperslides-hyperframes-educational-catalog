@@ -1,0 +1,14 @@
+{
+  "title": "Cost S-Curve",
+  "kicker": "Planned",
+  "question": "Is the cumulative cost curve worth keeping?",
+  "accentColor": "#6957a6",
+  "basePlateUrl": "../assets/6.png",
+  "footerText": "Review one style at a time",
+  "showQuestion": true,
+  "xAxisLabel": "Time",
+  "yAxisLabel": "Cumulative cost",
+  "pointOneLabel": "Mobilisation",
+  "pointTwoLabel": "Peak spend",
+  "pointThreeLabel": "Close-out"
+}

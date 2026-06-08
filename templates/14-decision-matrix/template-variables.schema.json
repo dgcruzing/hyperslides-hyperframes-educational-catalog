@@ -1,0 +1,137 @@
+[
+  {
+    "id": "title",
+    "type": "string",
+    "label": "Title",
+    "default": "Decision Matrix",
+    "maxLength": 72
+  },
+  {
+    "id": "kicker",
+    "type": "string",
+    "label": "Kicker",
+    "default": "Planned",
+    "maxLength": 42
+  },
+  {
+    "id": "question",
+    "type": "string",
+    "label": "Review question",
+    "default": "Is this useful for advanced option selection?",
+    "maxLength": 120
+  },
+  {
+    "id": "accentColor",
+    "type": "color",
+    "label": "Accent colour",
+    "default": "#285f9f"
+  },
+  {
+    "id": "basePlateUrl",
+    "type": "string",
+    "label": "Base plate URL",
+    "default": "../assets/2.png"
+  },
+  {
+    "id": "footerText",
+    "type": "string",
+    "label": "Footer text",
+    "default": "Review one style at a time",
+    "maxLength": 80
+  },
+  {
+    "id": "showQuestion",
+    "type": "boolean",
+    "label": "Show review question",
+    "default": true
+  },
+  {
+    "id": "optionOne",
+    "type": "string",
+    "label": "Option 1",
+    "default": "Option A",
+    "maxLength": 32
+  },
+  {
+    "id": "optionTwo",
+    "type": "string",
+    "label": "Option 2",
+    "default": "Option B",
+    "maxLength": 32
+  },
+  {
+    "id": "criterionOne",
+    "type": "string",
+    "label": "Criterion 1",
+    "default": "Cost",
+    "maxLength": 32
+  },
+  {
+    "id": "criterionTwo",
+    "type": "string",
+    "label": "Criterion 2",
+    "default": "Schedule",
+    "maxLength": 32
+  },
+  {
+    "id": "criterionThree",
+    "type": "string",
+    "label": "Criterion 3",
+    "default": "Quality",
+    "maxLength": 32
+  },
+  {
+    "id": "scoreOneA",
+    "type": "number",
+    "label": "Score 1A",
+    "default": 8,
+    "min": 0,
+    "max": 10,
+    "step": 1
+  },
+  {
+    "id": "scoreOneB",
+    "type": "number",
+    "label": "Score 1B",
+    "default": 5,
+    "min": 0,
+    "max": 10,
+    "step": 1
+  },
+  {
+    "id": "scoreTwoA",
+    "type": "number",
+    "label": "Score 2A",
+    "default": 7,
+    "min": 0,
+    "max": 10,
+    "step": 1
+  },
+  {
+    "id": "scoreTwoB",
+    "type": "number",
+    "label": "Score 2B",
+    "default": 4,
+    "min": 0,
+    "max": 10,
+    "step": 1
+  },
+  {
+    "id": "scoreThreeA",
+    "type": "number",
+    "label": "Score 3A",
+    "default": 9,
+    "min": 0,
+    "max": 10,
+    "step": 1
+  },
+  {
+    "id": "scoreThreeB",
+    "type": "number",
+    "label": "Score 3B",
+    "default": 6,
+    "min": 0,
+    "max": 10,
+    "step": 1
+  }
+]

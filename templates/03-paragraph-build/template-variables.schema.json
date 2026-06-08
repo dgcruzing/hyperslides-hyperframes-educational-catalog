@@ -1,0 +1,76 @@
+[
+  {
+    "id": "title",
+    "type": "string",
+    "label": "Title",
+    "default": "Paragraph Build",
+    "maxLength": 72
+  },
+  {
+    "id": "kicker",
+    "type": "string",
+    "label": "Kicker",
+    "default": "Planned",
+    "maxLength": 42
+  },
+  {
+    "id": "question",
+    "type": "string",
+    "label": "Review question",
+    "default": "Does the trainer-led line-by-line pacing feel clear?",
+    "maxLength": 120
+  },
+  {
+    "id": "accentColor",
+    "type": "color",
+    "label": "Accent colour",
+    "default": "#cd5746"
+  },
+  {
+    "id": "basePlateUrl",
+    "type": "string",
+    "label": "Base plate URL",
+    "default": "../assets/3.png"
+  },
+  {
+    "id": "footerText",
+    "type": "string",
+    "label": "Footer text",
+    "default": "Review one style at a time",
+    "maxLength": 80
+  },
+  {
+    "id": "showQuestion",
+    "type": "boolean",
+    "label": "Show review question",
+    "default": true
+  },
+  {
+    "id": "paragraphOne",
+    "type": "string",
+    "label": "Paragraph 1",
+    "default": "Define the boundary first",
+    "maxLength": 120
+  },
+  {
+    "id": "paragraphTwo",
+    "type": "string",
+    "label": "Paragraph 2",
+    "default": "Name inclusions",
+    "maxLength": 120
+  },
+  {
+    "id": "paragraphThree",
+    "type": "string",
+    "label": "Paragraph 3",
+    "default": "Name exclusions",
+    "maxLength": 120
+  },
+  {
+    "id": "paragraphFour",
+    "type": "string",
+    "label": "Paragraph 4",
+    "default": "Hold for explanation",
+    "maxLength": 120
+  }
+]

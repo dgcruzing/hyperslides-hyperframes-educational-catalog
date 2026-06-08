@@ -1,0 +1,14 @@
+{
+  "title": "Cost Stack",
+  "kicker": "Planned",
+  "question": "Do stacked blocks make budget categories tangible?",
+  "accentColor": "#cd5746",
+  "basePlateUrl": "../assets/3.png",
+  "footerText": "Review one style at a time",
+  "showQuestion": true,
+  "blockOne": "35% Labour",
+  "blockTwo": "30% Materials",
+  "blockThree": "15% Equipment",
+  "blockFour": "12% Subcontractors",
+  "blockFive": "8% Contingency"
+}

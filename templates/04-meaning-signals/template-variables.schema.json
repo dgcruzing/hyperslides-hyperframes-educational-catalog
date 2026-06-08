@@ -1,0 +1,100 @@
+[
+  {
+    "id": "title",
+    "type": "string",
+    "label": "Title",
+    "default": "Colour-Coded Meaning Signals",
+    "maxLength": 72
+  },
+  {
+    "id": "kicker",
+    "type": "string",
+    "label": "Kicker",
+    "default": "Planned",
+    "maxLength": 42
+  },
+  {
+    "id": "question",
+    "type": "string",
+    "label": "Review question",
+    "default": "Are green, red, amber, and neutral signals obvious enough?",
+    "maxLength": 120
+  },
+  {
+    "id": "accentColor",
+    "type": "color",
+    "label": "Accent colour",
+    "default": "#33424c"
+  },
+  {
+    "id": "basePlateUrl",
+    "type": "string",
+    "label": "Base plate URL",
+    "default": "../assets/4.png"
+  },
+  {
+    "id": "footerText",
+    "type": "string",
+    "label": "Footer text",
+    "default": "Review one style at a time",
+    "maxLength": 80
+  },
+  {
+    "id": "showQuestion",
+    "type": "boolean",
+    "label": "Show review question",
+    "default": true
+  },
+  {
+    "id": "successLabel",
+    "type": "string",
+    "label": "Success label",
+    "default": "Approved",
+    "maxLength": 32
+  },
+  {
+    "id": "warningLabel",
+    "type": "string",
+    "label": "Warning label",
+    "default": "Warning",
+    "maxLength": 32
+  },
+  {
+    "id": "cautionLabel",
+    "type": "string",
+    "label": "Caution label",
+    "default": "Clarify",
+    "maxLength": 32
+  },
+  {
+    "id": "neutralLabel",
+    "type": "string",
+    "label": "Neutral label",
+    "default": "Neutral",
+    "maxLength": 32
+  },
+  {
+    "id": "successColor",
+    "type": "color",
+    "label": "Success colour",
+    "default": "#22c55e"
+  },
+  {
+    "id": "warningColor",
+    "type": "color",
+    "label": "Warning colour",
+    "default": "#ef4444"
+  },
+  {
+    "id": "cautionColor",
+    "type": "color",
+    "label": "Caution colour",
+    "default": "#f59e0b"
+  },
+  {
+    "id": "neutralColor",
+    "type": "color",
+    "label": "Neutral colour",
+    "default": "#94a3b8"
+  }
+]

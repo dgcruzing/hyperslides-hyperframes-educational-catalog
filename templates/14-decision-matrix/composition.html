@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en" data-composition-variables='[{"id":"title","type":"string","label":"Title","default":"Decision Matrix","maxLength":72},{"id":"kicker","type":"string","label":"Kicker","default":"Planned","maxLength":42},{"id":"question","type":"string","label":"Review question","default":"Is this useful for advanced option selection?","maxLength":120},{"id":"accentColor","type":"color","label":"Accent colour","default":"#285f9f"},{"id":"basePlateUrl","type":"string","label":"Base plate URL","default":"../assets/2.png"},{"id":"footerText","type":"string","label":"Footer text","default":"Review one style at a time","maxLength":80},{"id":"showQuestion","type":"boolean","label":"Show review question","default":true},{"id":"optionOne","type":"string","label":"Option 1","default":"Option A","maxLength":32},{"id":"optionTwo","type":"string","label":"Option 2","default":"Option B","maxLength":32},{"id":"criterionOne","type":"string","label":"Criterion 1","default":"Cost","maxLength":32},{"id":"criterionTwo","type":"string","label":"Criterion 2","default":"Schedule","maxLength":32},{"id":"criterionThree","type":"string","label":"Criterion 3","default":"Quality","maxLength":32},{"id":"scoreOneA","type":"number","label":"Score 1A","default":8,"min":0,"max":10,"step":1},{"id":"scoreOneB","type":"number","label":"Score 1B","default":5,"min":0,"max":10,"step":1},{"id":"scoreTwoA","type":"number","label":"Score 2A","default":7,"min":0,"max":10,"step":1},{"id":"scoreTwoB","type":"number","label":"Score 2B","default":4,"min":0,"max":10,"step":1},{"id":"scoreThreeA","type":"number","label":"Score 3A","default":9,"min":0,"max":10,"step":1},{"id":"scoreThreeB","type":"number","label":"Score 3B","default":6,"min":0,"max":10,"step":1}]'>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=1920, height=1080" />
+  <title>Decision Matrix</title>
+  <style>
+    * { box-sizing: border-box; }
+    html, body { width: 1920px; height: 1080px; margin: 0; overflow: hidden; background: #f5f2ea; color: #182026; font-family: Arial, Helvetica, sans-serif; }
+    .stage { position: relative; width: 1920px; height: 1080px; overflow: hidden; background: #f5f2ea; --accent: #285f9f; }
+    .plate { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: .96; }
+    .top-accent { position: absolute; left: 0; right: 0; top: 0; height: 16px; background: var(--accent); }
+    .unit { position: absolute; left: 332px; top: 94px; display: flex; align-items: center; gap: 16px; color: #3d4a52; font-size: 28px; font-weight: 700; }
+    .unit-dot { width: 18px; height: 18px; background: var(--accent); border-radius: 50%; }
+    .kicker { position: absolute; left: 332px; top: 184px; color: var(--accent); font-size: 32px; font-weight: 900; text-transform: uppercase; }
+    h1 { position: absolute; left: 332px; top: 240px; width: 1280px; margin: 0; color: #182026; font-size: 58px; line-height: 1.03; font-weight: 900; }
+    .question { position: absolute; left: 332px; top: 372px; width: 1200px; color: #39484f; font-size: 30px; line-height: 1.18; font-weight: 700; }
+    .demo { position: absolute; left: 332px; top: 440px; width: 1358px; height: 390px; }
+    .footer { position: absolute; left: 332px; right: 252px; bottom: 54px; height: 42px; display: flex; align-items: center; justify-content: space-between; border-top: 3px solid rgba(52,66,76,.18); color: #5a666d; font-size: 22px; font-weight: 700; }
+    .progress { color: var(--accent); font-weight: 900; }
+    .card, .pill, .row, .block, .cell { border-radius: 8px; background: rgba(255,255,255,.84); box-shadow: 0 16px 36px rgba(24,32,38,.08); }
+    @keyframes rise { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes fromLeft { from { opacity: 0; transform: translateX(-110px); } to { opacity: 1; transform: translateX(0); } }
+    @keyframes fromRight { from { opacity: 0; transform: translateX(110px); } to { opacity: 1; transform: translateX(0); } }
+    @keyframes drop { from { opacity: 0; transform: translateY(-82px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes growX { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+    @keyframes growY { from { transform: scaleY(0); } to { transform: scaleY(1); } }
+    @keyframes draw { to { stroke-dashoffset: 0; } }
+    @keyframes spinIn { 0% { opacity: 0; transform: rotate(-42deg) scale(.22); } 62% { opacity: 1; transform: rotate(8deg) scale(1.06); } 100% { opacity: 1; transform: rotate(0deg) scale(1); } }
+    @keyframes labelIn { from { opacity: 0; transform: translateY(24px) scale(.94); } to { opacity: 1; transform: translateY(0) scale(1); } }
+    .matrix { display:grid; grid-template-columns:1.2fr 1fr 1fr; gap:10px; width:900px; margin:0 auto; }
+    .cell { min-height:70px; display:grid; place-items:center; border:3px solid #d8d2c6; font-size:26px; font-weight:900; animation:rise .35s var(--delay) both; }
+    .cell.win { background:rgba(34,197,94,.18); border-color:#22c55e; }
+  </style>
+</head>
+<body>
+  <main class="stage" data-composition-id="14-decision-matrix" data-width="1920" data-height="1080" data-duration="10">
+    <img class="plate" alt="" />
+    <div class="top-accent"></div>
+    <div class="unit"><span class="unit-dot"></span><span>Hyperslides Variable Catalog</span></div>
+    <div class="kicker"></div>
+    <h1></h1>
+    <div class="question"></div>
+    <section class="demo"></section>
+    <footer class="footer"><span class="footer-text"></span><span class="progress">14/14</span></footer>
+  </main>
+  <script>
+    const defaults = {
+    "title": "Decision Matrix",
+    "kicker": "Planned",
+    "question": "Is this useful for advanced option selection?",
+    "accentColor": "#285f9f",
+    "basePlateUrl": "../assets/2.png",
+    "footerText": "Review one style at a time",
+    "showQuestion": true,
+    "optionOne": "Option A",
+    "optionTwo": "Option B",
+    "criterionOne": "Cost",
+    "criterionTwo": "Schedule",
+    "criterionThree": "Quality",
+    "scoreOneA": 8,
+    "scoreOneB": 5,
+    "scoreTwoA": 7,
+    "scoreTwoB": 4,
+    "scoreThreeA": 9,
+    "scoreThreeB": 6
+};
+    const values = { ...defaults, ...(window.__hyperframes?.getVariables?.() ?? {}) };
+    const root = document.querySelector('[data-composition-id="14-decision-matrix"]');
+    root.style.setProperty('--accent', values.accentColor);
+    root.querySelector('.plate').src = values.basePlateUrl;
+    root.querySelector('.kicker').textContent = values.kicker;
+    root.querySelector('h1').textContent = values.title;
+    root.querySelector('.question').textContent = values.showQuestion ? values.question : '';
+    root.querySelector('.footer-text').textContent = values.footerText;
+    const cells = ['Criterion', values.optionOne, values.optionTwo, values.criterionOne, values.scoreOneA, values.scoreOneB, values.criterionTwo, values.scoreTwoA, values.scoreTwoB, values.criterionThree, values.scoreThreeA, values.scoreThreeB];
+    root.querySelector('.demo').innerHTML = '<div class="matrix">' + cells.map((cell, i) => '<div class="cell ' + (i > 8 ? 'win' : '') + '" style="--delay:' + (.45 + i * .08) + 's">' + cell + '</div>').join('') + '</div>';
+  </script>
+</body>
+</html>

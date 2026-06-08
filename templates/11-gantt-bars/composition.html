@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en" data-composition-variables='[{"id":"title","type":"string","label":"Title","default":"Gantt Bar Growth","maxLength":72},{"id":"kicker","type":"string","label":"Kicker","default":"Planned","maxLength":42},{"id":"question","type":"string","label":"Review question","default":"Does this communicate schedule sequence quickly?","maxLength":120},{"id":"accentColor","type":"color","label":"Accent colour","default":"#b1792f"},{"id":"basePlateUrl","type":"string","label":"Base plate URL","default":"../assets/5.png"},{"id":"footerText","type":"string","label":"Footer text","default":"Review one style at a time","maxLength":80},{"id":"showQuestion","type":"boolean","label":"Show review question","default":true},{"id":"taskOne","type":"string","label":"Task 1","default":"Site preparation","maxLength":48},{"id":"taskTwo","type":"string","label":"Task 2","default":"Foundation","maxLength":48},{"id":"taskThree","type":"string","label":"Task 3","default":"Structure","maxLength":48},{"id":"taskFour","type":"string","label":"Task 4","default":"Close-out","maxLength":48}]'>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=1920, height=1080" />
+  <title>Gantt Bar Growth</title>
+  <style>
+    * { box-sizing: border-box; }
+    html, body { width: 1920px; height: 1080px; margin: 0; overflow: hidden; background: #f5f2ea; color: #182026; font-family: Arial, Helvetica, sans-serif; }
+    .stage { position: relative; width: 1920px; height: 1080px; overflow: hidden; background: #f5f2ea; --accent: #b1792f; }
+    .plate { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: .96; }
+    .top-accent { position: absolute; left: 0; right: 0; top: 0; height: 16px; background: var(--accent); }
+    .unit { position: absolute; left: 332px; top: 94px; display: flex; align-items: center; gap: 16px; color: #3d4a52; font-size: 28px; font-weight: 700; }
+    .unit-dot { width: 18px; height: 18px; background: var(--accent); border-radius: 50%; }
+    .kicker { position: absolute; left: 332px; top: 184px; color: var(--accent); font-size: 32px; font-weight: 900; text-transform: uppercase; }
+    h1 { position: absolute; left: 332px; top: 240px; width: 1280px; margin: 0; color: #182026; font-size: 58px; line-height: 1.03; font-weight: 900; }
+    .question { position: absolute; left: 332px; top: 372px; width: 1200px; color: #39484f; font-size: 30px; line-height: 1.18; font-weight: 700; }
+    .demo { position: absolute; left: 332px; top: 440px; width: 1358px; height: 390px; }
+    .footer { position: absolute; left: 332px; right: 252px; bottom: 54px; height: 42px; display: flex; align-items: center; justify-content: space-between; border-top: 3px solid rgba(52,66,76,.18); color: #5a666d; font-size: 22px; font-weight: 700; }
+    .progress { color: var(--accent); font-weight: 900; }
+    .card, .pill, .row, .block, .cell { border-radius: 8px; background: rgba(255,255,255,.84); box-shadow: 0 16px 36px rgba(24,32,38,.08); }
+    @keyframes rise { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes fromLeft { from { opacity: 0; transform: translateX(-110px); } to { opacity: 1; transform: translateX(0); } }
+    @keyframes fromRight { from { opacity: 0; transform: translateX(110px); } to { opacity: 1; transform: translateX(0); } }
+    @keyframes drop { from { opacity: 0; transform: translateY(-82px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes growX { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+    @keyframes growY { from { transform: scaleY(0); } to { transform: scaleY(1); } }
+    @keyframes draw { to { stroke-dashoffset: 0; } }
+    @keyframes spinIn { 0% { opacity: 0; transform: rotate(-42deg) scale(.22); } 62% { opacity: 1; transform: rotate(8deg) scale(1.06); } 100% { opacity: 1; transform: rotate(0deg) scale(1); } }
+    @keyframes labelIn { from { opacity: 0; transform: translateY(24px) scale(.94); } to { opacity: 1; transform: translateY(0) scale(1); } }
+    .gantt { display:grid; gap:24px; padding-top:20px; }
+    .gantt-row { display:grid; grid-template-columns:260px 1fr; align-items:center; gap:24px; font-size:28px; font-weight:900; }
+    .gantt-row b { height:42px; width:var(--w); background:var(--accent); border-radius:6px; transform-origin:left; animation:growX .75s var(--delay) both; }
+  </style>
+</head>
+<body>
+  <main class="stage" data-composition-id="11-gantt-bars" data-width="1920" data-height="1080" data-duration="10">
+    <img class="plate" alt="" />
+    <div class="top-accent"></div>
+    <div class="unit"><span class="unit-dot"></span><span>Hyperslides Variable Catalog</span></div>
+    <div class="kicker"></div>
+    <h1></h1>
+    <div class="question"></div>
+    <section class="demo"></section>
+    <footer class="footer"><span class="footer-text"></span><span class="progress">11/14</span></footer>
+  </main>
+  <script>
+    const defaults = {
+    "title": "Gantt Bar Growth",
+    "kicker": "Planned",
+    "question": "Does this communicate schedule sequence quickly?",
+    "accentColor": "#b1792f",
+    "basePlateUrl": "../assets/5.png",
+    "footerText": "Review one style at a time",
+    "showQuestion": true,
+    "taskOne": "Site preparation",
+    "taskTwo": "Foundation",
+    "taskThree": "Structure",
+    "taskFour": "Close-out"
+};
+    const values = { ...defaults, ...(window.__hyperframes?.getVariables?.() ?? {}) };
+    const root = document.querySelector('[data-composition-id="11-gantt-bars"]');
+    root.style.setProperty('--accent', values.accentColor);
+    root.querySelector('.plate').src = values.basePlateUrl;
+    root.querySelector('.kicker').textContent = values.kicker;
+    root.querySelector('h1').textContent = values.title;
+    root.querySelector('.question').textContent = values.showQuestion ? values.question : '';
+    root.querySelector('.footer-text').textContent = values.footerText;
+    const tasks = [values.taskOne, values.taskTwo, values.taskThree, values.taskFour];
+    root.querySelector('.demo').innerHTML = '<div class="gantt">' + tasks.map((task, i) => '<div class="gantt-row"><span>' + task + '</span><b style="--delay:' + (.6 + i * .45) + 's; --w:' + (52 + i * 10) + '%"></b></div>').join('') + '</div>';
+  </script>
+</body>
+</html>

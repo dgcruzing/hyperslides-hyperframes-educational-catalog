@@ -1,0 +1,15 @@
+{
+  "title": "Right Way / Wrong Way Columns",
+  "kicker": "Planned",
+  "question": "Does side-by-side contrast help decision making?",
+  "accentColor": "#b1792f",
+  "basePlateUrl": "../assets/5.png",
+  "footerText": "Review one style at a time",
+  "showQuestion": true,
+  "leftTitle": "Right Way",
+  "leftBody": "Assess impact, cost the change, gain approval, then implement.",
+  "leftColor": "#22c55e",
+  "rightTitle": "Wrong Way",
+  "rightBody": "Say yes immediately, skip costing, and absorb the overrun.",
+  "rightColor": "#ef4444"
+}

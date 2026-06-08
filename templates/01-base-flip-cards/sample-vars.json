@@ -1,0 +1,13 @@
+{
+  "title": "Base 01 - Voice-Paced Flip Cards",
+  "kicker": "Locked baseline",
+  "question": "Does this remain the default ACS module-intro feel?",
+  "accentColor": "#2f765f",
+  "basePlateUrl": "../assets/1.png",
+  "footerText": "Review one style at a time",
+  "showQuestion": true,
+  "cardOneFront": "Front captions hold for voice start",
+  "cardOneBack": "Cards flip into learner-facing detail after the voice start.",
+  "cardTwoFront": "Cards flip into detail",
+  "cardTwoBack": "Outro and plate rules stay locked for ACS production use."
+}

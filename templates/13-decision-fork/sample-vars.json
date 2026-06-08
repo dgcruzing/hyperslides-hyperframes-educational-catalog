@@ -1,0 +1,13 @@
+{
+  "title": "Decision Fork",
+  "kicker": "Planned",
+  "question": "Does the fork make consequences clear?",
+  "accentColor": "#2f765f",
+  "basePlateUrl": "../assets/1.png",
+  "footerText": "Review one style at a time",
+  "showQuestion": true,
+  "goodLabel": "Controlled change",
+  "badLabel": "Budget blown",
+  "goodColor": "#22c55e",
+  "badColor": "#ef4444"
+}

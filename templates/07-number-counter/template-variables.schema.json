@@ -1,0 +1,72 @@
+[
+  {
+    "id": "title",
+    "type": "string",
+    "label": "Title",
+    "default": "Cost Number Counter",
+    "maxLength": 72
+  },
+  {
+    "id": "kicker",
+    "type": "string",
+    "label": "Kicker",
+    "default": "Planned",
+    "maxLength": 42
+  },
+  {
+    "id": "question",
+    "type": "string",
+    "label": "Review question",
+    "default": "Does the number animation make cost impact visible?",
+    "maxLength": 120
+  },
+  {
+    "id": "accentColor",
+    "type": "color",
+    "label": "Accent colour",
+    "default": "#2f765f"
+  },
+  {
+    "id": "basePlateUrl",
+    "type": "string",
+    "label": "Base plate URL",
+    "default": "../assets/1.png"
+  },
+  {
+    "id": "footerText",
+    "type": "string",
+    "label": "Footer text",
+    "default": "Review one style at a time",
+    "maxLength": 80
+  },
+  {
+    "id": "showQuestion",
+    "type": "boolean",
+    "label": "Show review question",
+    "default": true
+  },
+  {
+    "id": "amount",
+    "type": "number",
+    "label": "Final amount",
+    "default": 485000,
+    "min": 0,
+    "max": 5000000,
+    "step": 1000,
+    "unit": "$"
+  },
+  {
+    "id": "caption",
+    "type": "string",
+    "label": "Caption",
+    "default": "Every block has a unit rate behind it",
+    "maxLength": 90
+  },
+  {
+    "id": "prefix",
+    "type": "string",
+    "label": "Prefix",
+    "default": "$",
+    "maxLength": 4
+  }
+]

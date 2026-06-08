@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en" data-composition-variables='[{"id":"title","type":"string","label":"Title","default":"Triple Constraint","maxLength":72},{"id":"kicker","type":"string","label":"Kicker","default":"Planned","maxLength":42},{"id":"question","type":"string","label":"Review question","default":"Does the triangle make scope/time/cost trade-offs visible?","maxLength":120},{"id":"accentColor","type":"color","label":"Accent colour","default":"#33424c"},{"id":"basePlateUrl","type":"string","label":"Base plate URL","default":"../assets/4.png"},{"id":"footerText","type":"string","label":"Footer text","default":"Review one style at a time","maxLength":80},{"id":"showQuestion","type":"boolean","label":"Show review question","default":true},{"id":"topLabel","type":"string","label":"Top label","default":"SCOPE","maxLength":18},{"id":"leftLabel","type":"string","label":"Left label","default":"TIME","maxLength":18},{"id":"rightLabel","type":"string","label":"Right label","default":"COST","maxLength":18},{"id":"centreLabel","type":"string","label":"Centre label","default":"QUALITY","maxLength":24},{"id":"spinIn","type":"boolean","label":"Spin triangle in","default":true}]'>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=1920, height=1080" />
+  <title>Triple Constraint</title>
+  <style>
+    * { box-sizing: border-box; }
+    html, body { width: 1920px; height: 1080px; margin: 0; overflow: hidden; background: #f5f2ea; color: #182026; font-family: Arial, Helvetica, sans-serif; }
+    .stage { position: relative; width: 1920px; height: 1080px; overflow: hidden; background: #f5f2ea; --accent: #33424c; }
+    .plate { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: .96; }
+    .top-accent { position: absolute; left: 0; right: 0; top: 0; height: 16px; background: var(--accent); }
+    .unit { position: absolute; left: 332px; top: 94px; display: flex; align-items: center; gap: 16px; color: #3d4a52; font-size: 28px; font-weight: 700; }
+    .unit-dot { width: 18px; height: 18px; background: var(--accent); border-radius: 50%; }
+    .kicker { position: absolute; left: 332px; top: 184px; color: var(--accent); font-size: 32px; font-weight: 900; text-transform: uppercase; }
+    h1 { position: absolute; left: 332px; top: 240px; width: 1280px; margin: 0; color: #182026; font-size: 58px; line-height: 1.03; font-weight: 900; }
+    .question { position: absolute; left: 332px; top: 372px; width: 1200px; color: #39484f; font-size: 30px; line-height: 1.18; font-weight: 700; }
+    .demo { position: absolute; left: 332px; top: 440px; width: 1358px; height: 390px; }
+    .footer { position: absolute; left: 332px; right: 252px; bottom: 54px; height: 42px; display: flex; align-items: center; justify-content: space-between; border-top: 3px solid rgba(52,66,76,.18); color: #5a666d; font-size: 22px; font-weight: 700; }
+    .progress { color: var(--accent); font-weight: 900; }
+    .card, .pill, .row, .block, .cell { border-radius: 8px; background: rgba(255,255,255,.84); box-shadow: 0 16px 36px rgba(24,32,38,.08); }
+    @keyframes rise { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes fromLeft { from { opacity: 0; transform: translateX(-110px); } to { opacity: 1; transform: translateX(0); } }
+    @keyframes fromRight { from { opacity: 0; transform: translateX(110px); } to { opacity: 1; transform: translateX(0); } }
+    @keyframes drop { from { opacity: 0; transform: translateY(-82px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes growX { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+    @keyframes growY { from { transform: scaleY(0); } to { transform: scaleY(1); } }
+    @keyframes draw { to { stroke-dashoffset: 0; } }
+    @keyframes spinIn { 0% { opacity: 0; transform: rotate(-42deg) scale(.22); } 62% { opacity: 1; transform: rotate(8deg) scale(1.06); } 100% { opacity: 1; transform: rotate(0deg) scale(1); } }
+    @keyframes labelIn { from { opacity: 0; transform: translateY(24px) scale(.94); } to { opacity: 1; transform: translateY(0) scale(1); } }
+    .triangle { width:820px; height:400px; display:block; margin:-12px auto 0; overflow:visible; }
+    .triangle text { text-anchor:middle; font-size:32px; font-weight:900; fill:#26343b; }
+    .triangle-shape { transform-box:fill-box; transform-origin:center; animation:spinIn 1.35s .55s cubic-bezier(.22,.75,.18,1) both; }
+    .triangle .top { fill:var(--accent); font-size:34px; }
+    .triangle .scope-label, .triangle .time-label, .triangle .cost-label, .triangle .quality { opacity:0; transform-box:fill-box; transform-origin:center; animation:labelIn .58s cubic-bezier(.22,.75,.18,1) both; }
+    .triangle .scope-label { animation-delay:2.05s; } .triangle .time-label { animation-delay:2.65s; } .triangle .cost-label { animation-delay:3.25s; }
+    .triangle .quality { font-size:44px; fill:var(--accent); animation-delay:3.95s; }
+  </style>
+</head>
+<body>
+  <main class="stage" data-composition-id="10-triple-constraint" data-width="1920" data-height="1080" data-duration="10">
+    <img class="plate" alt="" />
+    <div class="top-accent"></div>
+    <div class="unit"><span class="unit-dot"></span><span>Hyperslides Variable Catalog</span></div>
+    <div class="kicker"></div>
+    <h1></h1>
+    <div class="question"></div>
+    <section class="demo"></section>
+    <footer class="footer"><span class="footer-text"></span><span class="progress">10/14</span></footer>
+  </main>
+  <script>
+    const defaults = {
+    "title": "Triple Constraint",
+    "kicker": "Planned",
+    "question": "Does the triangle make scope/time/cost trade-offs visible?",
+    "accentColor": "#33424c",
+    "basePlateUrl": "../assets/4.png",
+    "footerText": "Review one style at a time",
+    "showQuestion": true,
+    "topLabel": "SCOPE",
+    "leftLabel": "TIME",
+    "rightLabel": "COST",
+    "centreLabel": "QUALITY",
+    "spinIn": true
+};
+    const values = { ...defaults, ...(window.__hyperframes?.getVariables?.() ?? {}) };
+    const root = document.querySelector('[data-composition-id="10-triple-constraint"]');
+    root.style.setProperty('--accent', values.accentColor);
+    root.querySelector('.plate').src = values.basePlateUrl;
+    root.querySelector('.kicker').textContent = values.kicker;
+    root.querySelector('h1').textContent = values.title;
+    root.querySelector('.question').textContent = values.showQuestion ? values.question : '';
+    root.querySelector('.footer-text').textContent = values.footerText;
+    root.querySelector('.demo').innerHTML = '<svg class="triangle" viewBox="0 0 760 390"><g class="triangle-shape" style="' + (values.spinIn ? '' : 'animation:none;opacity:1;transform:none;') + '"><polygon points="380,78 100,340 660,340" fill="rgba(47,118,95,.08)" stroke="' + values.accentColor + '" stroke-width="8"/></g><text x="380" y="48" class="top scope-label">' + values.topLabel + '</text><text x="100" y="374" class="time-label">' + values.leftLabel + '</text><text x="660" y="374" class="cost-label">' + values.rightLabel + '</text><text x="380" y="250" class="quality">' + values.centreLabel + '</text></svg>';
+  </script>
+</body>
+</html>

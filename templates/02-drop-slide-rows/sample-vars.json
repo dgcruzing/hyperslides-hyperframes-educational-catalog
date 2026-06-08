@@ -1,0 +1,14 @@
+{
+  "title": "Base 02 - Drop/Slide Rows",
+  "kicker": "Experimental",
+  "question": "Is this useful when two flip cards are not enough?",
+  "accentColor": "#285f9f",
+  "basePlateUrl": "../assets/2.png",
+  "footerText": "Review one style at a time",
+  "showQuestion": true,
+  "rowOne": "Row 1 drops",
+  "rowTwo": "Row 2 slides left",
+  "rowThree": "Row 3 slides right",
+  "rowFour": "Row 4 drops",
+  "rowMotion": "mixed-drop-slide"
+}

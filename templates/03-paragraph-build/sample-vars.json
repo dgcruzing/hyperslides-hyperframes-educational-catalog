@@ -1,0 +1,13 @@
+{
+  "title": "Paragraph Build",
+  "kicker": "Planned",
+  "question": "Does the trainer-led line-by-line pacing feel clear?",
+  "accentColor": "#cd5746",
+  "basePlateUrl": "../assets/3.png",
+  "footerText": "Review one style at a time",
+  "showQuestion": true,
+  "paragraphOne": "Define the boundary first",
+  "paragraphTwo": "Name inclusions",
+  "paragraphThree": "Name exclusions",
+  "paragraphFour": "Hold for explanation"
+}

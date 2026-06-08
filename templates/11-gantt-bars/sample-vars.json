@@ -1,0 +1,13 @@
+{
+  "title": "Gantt Bar Growth",
+  "kicker": "Planned",
+  "question": "Does this communicate schedule sequence quickly?",
+  "accentColor": "#b1792f",
+  "basePlateUrl": "../assets/5.png",
+  "footerText": "Review one style at a time",
+  "showQuestion": true,
+  "taskOne": "Site preparation",
+  "taskTwo": "Foundation",
+  "taskThree": "Structure",
+  "taskFour": "Close-out"
+}

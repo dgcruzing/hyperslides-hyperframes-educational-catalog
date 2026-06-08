@@ -1,0 +1,82 @@
+[
+  {
+    "id": "title",
+    "type": "string",
+    "label": "Title",
+    "default": "Checklist Reveal",
+    "maxLength": 72
+  },
+  {
+    "id": "kicker",
+    "type": "string",
+    "label": "Kicker",
+    "default": "Planned",
+    "maxLength": 42
+  },
+  {
+    "id": "question",
+    "type": "string",
+    "label": "Review question",
+    "default": "Does this work for procedure and evidence cues?",
+    "maxLength": 120
+  },
+  {
+    "id": "accentColor",
+    "type": "color",
+    "label": "Accent colour",
+    "default": "#6957a6"
+  },
+  {
+    "id": "basePlateUrl",
+    "type": "string",
+    "label": "Base plate URL",
+    "default": "../assets/6.png"
+  },
+  {
+    "id": "footerText",
+    "type": "string",
+    "label": "Footer text",
+    "default": "Review one style at a time",
+    "maxLength": 80
+  },
+  {
+    "id": "showQuestion",
+    "type": "boolean",
+    "label": "Show review question",
+    "default": true
+  },
+  {
+    "id": "itemOne",
+    "type": "string",
+    "label": "Item 1",
+    "default": "Scope impact checked",
+    "maxLength": 72
+  },
+  {
+    "id": "itemTwo",
+    "type": "string",
+    "label": "Item 2",
+    "default": "Cost impact checked",
+    "maxLength": 72
+  },
+  {
+    "id": "itemThree",
+    "type": "string",
+    "label": "Item 3",
+    "default": "Schedule impact checked",
+    "maxLength": 72
+  },
+  {
+    "id": "itemFour",
+    "type": "string",
+    "label": "Item 4",
+    "default": "Approval recorded",
+    "maxLength": 72
+  },
+  {
+    "id": "checkColor",
+    "type": "color",
+    "label": "Check colour",
+    "default": "#22c55e"
+  }
+]

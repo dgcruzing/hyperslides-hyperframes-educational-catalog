@@ -1,0 +1,17 @@
+{
+  "title": "Colour-Coded Meaning Signals",
+  "kicker": "Planned",
+  "question": "Are green, red, amber, and neutral signals obvious enough?",
+  "accentColor": "#33424c",
+  "basePlateUrl": "../assets/4.png",
+  "footerText": "Review one style at a time",
+  "showQuestion": true,
+  "successLabel": "Approved",
+  "warningLabel": "Warning",
+  "cautionLabel": "Clarify",
+  "neutralLabel": "Neutral",
+  "successColor": "#22c55e",
+  "warningColor": "#ef4444",
+  "cautionColor": "#f59e0b",
+  "neutralColor": "#94a3b8"
+}

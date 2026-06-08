@@ -1,0 +1,69 @@
+[
+  {
+    "id": "title",
+    "type": "string",
+    "label": "Title",
+    "default": "Scope Funnel",
+    "maxLength": 72
+  },
+  {
+    "id": "kicker",
+    "type": "string",
+    "label": "Kicker",
+    "default": "Planned",
+    "maxLength": 42
+  },
+  {
+    "id": "question",
+    "type": "string",
+    "label": "Review question",
+    "default": "Does the metaphor explain narrowing scope?",
+    "maxLength": 120
+  },
+  {
+    "id": "accentColor",
+    "type": "color",
+    "label": "Accent colour",
+    "default": "#285f9f"
+  },
+  {
+    "id": "basePlateUrl",
+    "type": "string",
+    "label": "Base plate URL",
+    "default": "../assets/2.png"
+  },
+  {
+    "id": "footerText",
+    "type": "string",
+    "label": "Footer text",
+    "default": "Review one style at a time",
+    "maxLength": 80
+  },
+  {
+    "id": "showQuestion",
+    "type": "boolean",
+    "label": "Show review question",
+    "default": true
+  },
+  {
+    "id": "topLabel",
+    "type": "string",
+    "label": "Top layer",
+    "default": "Requests and ideas",
+    "maxLength": 48
+  },
+  {
+    "id": "middleLabel",
+    "type": "string",
+    "label": "Middle layer",
+    "default": "Feasibility filter",
+    "maxLength": 48
+  },
+  {
+    "id": "bottomLabel",
+    "type": "string",
+    "label": "Bottom layer",
+    "default": "Approved scope",
+    "maxLength": 48
+  }
+]

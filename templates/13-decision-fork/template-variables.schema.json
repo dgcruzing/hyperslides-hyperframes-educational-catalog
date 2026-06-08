@@ -1,0 +1,74 @@
+[
+  {
+    "id": "title",
+    "type": "string",
+    "label": "Title",
+    "default": "Decision Fork",
+    "maxLength": 72
+  },
+  {
+    "id": "kicker",
+    "type": "string",
+    "label": "Kicker",
+    "default": "Planned",
+    "maxLength": 42
+  },
+  {
+    "id": "question",
+    "type": "string",
+    "label": "Review question",
+    "default": "Does the fork make consequences clear?",
+    "maxLength": 120
+  },
+  {
+    "id": "accentColor",
+    "type": "color",
+    "label": "Accent colour",
+    "default": "#2f765f"
+  },
+  {
+    "id": "basePlateUrl",
+    "type": "string",
+    "label": "Base plate URL",
+    "default": "../assets/1.png"
+  },
+  {
+    "id": "footerText",
+    "type": "string",
+    "label": "Footer text",
+    "default": "Review one style at a time",
+    "maxLength": 80
+  },
+  {
+    "id": "showQuestion",
+    "type": "boolean",
+    "label": "Show review question",
+    "default": true
+  },
+  {
+    "id": "goodLabel",
+    "type": "string",
+    "label": "Positive path label",
+    "default": "Controlled change",
+    "maxLength": 36
+  },
+  {
+    "id": "badLabel",
+    "type": "string",
+    "label": "Negative path label",
+    "default": "Budget blown",
+    "maxLength": 36
+  },
+  {
+    "id": "goodColor",
+    "type": "color",
+    "label": "Positive colour",
+    "default": "#22c55e"
+  },
+  {
+    "id": "badColor",
+    "type": "color",
+    "label": "Negative colour",
+    "default": "#ef4444"
+  }
+]

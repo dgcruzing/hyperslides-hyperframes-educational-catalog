@@ -1,0 +1,165 @@
+{
+  "id": "hyperslides-hyperframes-educational-catalog",
+  "name": "Hyperslides HyperFrames Educational Variable Catalog",
+  "version": "0.1.0",
+  "sourceDocs": [
+    "https://github.com/heygen-com/hyperframes",
+    "https://hyperframes.heygen.com/concepts/variables"
+  ],
+  "styles": [
+    {
+      "id": "01-base-flip-cards",
+      "name": "Base 01 - Voice-Paced Flip Cards",
+      "status": "locked baseline",
+      "purpose": "Default ACS module-intro pattern with two voice-paced flip cards.",
+      "folder": "templates/01-base-flip-cards",
+      "composition": "templates/01-base-flip-cards/composition.html",
+      "schema": "templates/01-base-flip-cards/template-variables.schema.json",
+      "sampleVars": "templates/01-base-flip-cards/sample-vars.json",
+      "preview": "previews/hyperslides_style_01-base-flip-cards.mp4"
+    },
+    {
+      "id": "02-drop-slide-rows",
+      "name": "Base 02 - Drop/Slide Rows",
+      "status": "experimental",
+      "purpose": "Row-by-row reveal for topic slides that need more than two card ideas.",
+      "folder": "templates/02-drop-slide-rows",
+      "composition": "templates/02-drop-slide-rows/composition.html",
+      "schema": "templates/02-drop-slide-rows/template-variables.schema.json",
+      "sampleVars": "templates/02-drop-slide-rows/sample-vars.json",
+      "preview": "previews/hyperslides_style_02-drop-slide-rows.mp4"
+    },
+    {
+      "id": "03-paragraph-build",
+      "name": "Paragraph Build",
+      "status": "planned",
+      "purpose": "Line-by-line reveal for narrated explanation.",
+      "folder": "templates/03-paragraph-build",
+      "composition": "templates/03-paragraph-build/composition.html",
+      "schema": "templates/03-paragraph-build/template-variables.schema.json",
+      "sampleVars": "templates/03-paragraph-build/sample-vars.json",
+      "preview": "previews/hyperslides_style_03-paragraph-build.mp4"
+    },
+    {
+      "id": "04-meaning-signals",
+      "name": "Colour-Coded Meaning Signals",
+      "status": "planned",
+      "purpose": "Show approved, warning, caution, and neutral states with colour.",
+      "folder": "templates/04-meaning-signals",
+      "composition": "templates/04-meaning-signals/composition.html",
+      "schema": "templates/04-meaning-signals/template-variables.schema.json",
+      "sampleVars": "templates/04-meaning-signals/sample-vars.json",
+      "preview": "previews/hyperslides_style_04-meaning-signals.mp4"
+    },
+    {
+      "id": "05-comparison-columns",
+      "name": "Right Way / Wrong Way Columns",
+      "status": "planned",
+      "purpose": "Side-by-side contrast between preferred and poor practice.",
+      "folder": "templates/05-comparison-columns",
+      "composition": "templates/05-comparison-columns/composition.html",
+      "schema": "templates/05-comparison-columns/template-variables.schema.json",
+      "sampleVars": "templates/05-comparison-columns/sample-vars.json",
+      "preview": "previews/hyperslides_style_05-comparison-columns.mp4"
+    },
+    {
+      "id": "06-checklist-reveal",
+      "name": "Checklist Reveal",
+      "status": "planned",
+      "purpose": "Step-by-step checklist reveal for evidence or process cues.",
+      "folder": "templates/06-checklist-reveal",
+      "composition": "templates/06-checklist-reveal/composition.html",
+      "schema": "templates/06-checklist-reveal/template-variables.schema.json",
+      "sampleVars": "templates/06-checklist-reveal/sample-vars.json",
+      "preview": "previews/hyperslides_style_06-checklist-reveal.mp4"
+    },
+    {
+      "id": "07-number-counter",
+      "name": "Cost Number Counter",
+      "status": "planned",
+      "purpose": "Animated count-up for budget or cost impact.",
+      "folder": "templates/07-number-counter",
+      "composition": "templates/07-number-counter/composition.html",
+      "schema": "templates/07-number-counter/template-variables.schema.json",
+      "sampleVars": "templates/07-number-counter/sample-vars.json",
+      "preview": "previews/hyperslides_style_07-number-counter.mp4"
+    },
+    {
+      "id": "08-scope-funnel",
+      "name": "Scope Funnel",
+      "status": "planned",
+      "purpose": "Visual metaphor for narrowing possible work into approved scope.",
+      "folder": "templates/08-scope-funnel",
+      "composition": "templates/08-scope-funnel/composition.html",
+      "schema": "templates/08-scope-funnel/template-variables.schema.json",
+      "sampleVars": "templates/08-scope-funnel/sample-vars.json",
+      "preview": "previews/hyperslides_style_08-scope-funnel.mp4"
+    },
+    {
+      "id": "09-cost-stack",
+      "name": "Cost Stack",
+      "status": "planned",
+      "purpose": "Stacked budget categories with configurable labels and proportions.",
+      "folder": "templates/09-cost-stack",
+      "composition": "templates/09-cost-stack/composition.html",
+      "schema": "templates/09-cost-stack/template-variables.schema.json",
+      "sampleVars": "templates/09-cost-stack/sample-vars.json",
+      "preview": "previews/hyperslides_style_09-cost-stack.mp4"
+    },
+    {
+      "id": "10-triple-constraint",
+      "name": "Triple Constraint",
+      "status": "planned",
+      "purpose": "Animated triangle showing scope, time, cost, and quality.",
+      "folder": "templates/10-triple-constraint",
+      "composition": "templates/10-triple-constraint/composition.html",
+      "schema": "templates/10-triple-constraint/template-variables.schema.json",
+      "sampleVars": "templates/10-triple-constraint/sample-vars.json",
+      "preview": "previews/hyperslides_style_10-triple-constraint.mp4"
+    },
+    {
+      "id": "11-gantt-bars",
+      "name": "Gantt Bar Growth",
+      "status": "planned",
+      "purpose": "Horizontal bar growth for schedule sequence.",
+      "folder": "templates/11-gantt-bars",
+      "composition": "templates/11-gantt-bars/composition.html",
+      "schema": "templates/11-gantt-bars/template-variables.schema.json",
+      "sampleVars": "templates/11-gantt-bars/sample-vars.json",
+      "preview": "previews/hyperslides_style_11-gantt-bars.mp4"
+    },
+    {
+      "id": "12-s-curve",
+      "name": "Cost S-Curve",
+      "status": "planned",
+      "purpose": "Animated cumulative cost curve.",
+      "folder": "templates/12-s-curve",
+      "composition": "templates/12-s-curve/composition.html",
+      "schema": "templates/12-s-curve/template-variables.schema.json",
+      "sampleVars": "templates/12-s-curve/sample-vars.json",
+      "preview": "previews/hyperslides_style_12-s-curve.mp4"
+    },
+    {
+      "id": "13-decision-fork",
+      "name": "Decision Fork",
+      "status": "planned",
+      "purpose": "Forked path showing positive and negative consequences.",
+      "folder": "templates/13-decision-fork",
+      "composition": "templates/13-decision-fork/composition.html",
+      "schema": "templates/13-decision-fork/template-variables.schema.json",
+      "sampleVars": "templates/13-decision-fork/sample-vars.json",
+      "preview": "previews/hyperslides_style_13-decision-fork.mp4"
+    },
+    {
+      "id": "14-decision-matrix",
+      "name": "Decision Matrix",
+      "status": "planned",
+      "purpose": "Weighted option table with configurable criteria and scores.",
+      "folder": "templates/14-decision-matrix",
+      "composition": "templates/14-decision-matrix/composition.html",
+      "schema": "templates/14-decision-matrix/template-variables.schema.json",
+      "sampleVars": "templates/14-decision-matrix/sample-vars.json",
+      "preview": "previews/hyperslides_style_14-decision-matrix.mp4"
+    }
+  ]
+}
