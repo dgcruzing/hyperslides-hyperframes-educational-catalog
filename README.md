@@ -4,6 +4,12 @@ Reusable HyperFrames-style educational motion templates for trainer-led videos, 
 
 This catalog is designed as a small playground: each style has a variable-native HTML composition, a schema, sample values, and a short preview render.
 
+## Dummies Guide
+
+If you are new to this workflow, start with the plain-English Google Slides guide:
+
+- Dummies guide slides: https://docs.google.com/presentation/d/e/2PACX-1vT8RKiLMCS5sSL5t-RqPpQZB_8I7usiKG7a1o6O3Qy3SsaB5BlUAk-ansl81jC1mb-S_XgbNaHenGxe/pub?start=false&loop=false&delayms=3000
+
 ## Built For HyperFrames
 
 HyperFrames is the open-source HTML-to-video framework from HeyGen:
@@ -11,12 +17,32 @@ HyperFrames is the open-source HTML-to-video framework from HeyGen:
 - GitHub: https://github.com/heygen-com/hyperframes
 - Variables documentation: https://hyperframes.heygen.com/concepts/variables
 
+This repository is a template catalog. It is not a replacement for the base HyperFrames project.
+
+For local rendering, beginners should have both:
+
+1. The base HyperFrames project from HeyGen.
+2. This educational template catalog.
+
 These examples follow the HyperFrames variable pattern:
 
 - variables declared with `data-composition-variables`
 - runtime values read with `window.__hyperframes.getVariables()`
 - sample values stored beside each composition as `sample-vars.json`
 - fixed render settings kept outside the variable layer
+
+## Beginner Setup Checklist
+
+Before you try to render a video, make sure you have:
+
+- A local copy of HyperFrames: https://github.com/heygen-com/hyperframes
+- A local copy of this catalog: https://github.com/dgcruzing/hyperslides-hyperframes-educational-catalog
+- Node.js installed.
+- A graphics card suitable for local video rendering.
+- Recommended minimum for local rendering: a GPU with at least 4 GB VRAM.
+- More GPU memory is better for heavier renders, longer videos, and smoother iteration.
+
+If you only want to look around, start with the preview MP4s in `previews/`. You do not need to render anything just to understand the styles.
 
 ## What Is Included
 
@@ -55,7 +81,16 @@ catalog.manifest.json
 
 ## Try A Template
 
-Install or clone HyperFrames from the upstream project, then render any composition with its sample variables.
+Install or clone HyperFrames from the upstream project first, then place or reference this catalog where your HyperFrames render workflow can find it.
+
+Plain-English version:
+
+1. Get HyperFrames.
+2. Get this catalog.
+3. Pick one folder in `templates/`.
+4. Edit that folder's `sample-vars.json`.
+5. Preview.
+6. Render only when the wording fits.
 
 Example:
 
